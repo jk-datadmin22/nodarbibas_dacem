@@ -58,8 +58,6 @@ print("==================================")
 # Lietotājs ievada pateriņu (kWh) programma izvada cik ir jāmaksā. 
 # Jāizmanto Latvijas gāzes cenu tabula
 
-# ja tavs patēriņš ir tik līdz tik, tev ir jāmaksā tik reiz tavs patēriņš
-
 paterins = float(input("Lūdzu ievadi savu dabasgāzes gada patēriņu kWh:"))
 
 if paterins <= 2635:
