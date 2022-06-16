@@ -3,7 +3,7 @@
 # ja tas ievada vārdu, Bond, tad izdrukājiet uz ekrāna "Esi sveicināts 007", 
 # ja cits tad "Esi sveicināts, VARDS", kur VARDS ir lietotāja ievadītais vārds.
 
-vards = str(input("Kāds ir Tavs vārds? "))
+vards = input("Kāds ir Tavs vārds? ")
 
 if vards == "Bond":
     print("Esi sveicināts 007")
@@ -17,7 +17,7 @@ print("==================================")
 
 skaitlis = int(input("Lūdzu ievadi skaitli: "))
 
-if (skaitlis % 2) == 0:
+if skaitlis % 2 == 0:
     print("Šis ir pāra skaitlis!")
 else:
     print("Šis ir nepāra skaitlis!")
@@ -61,11 +61,31 @@ print("==================================")
 paterins = float(input("Lūdzu ievadi savu dabasgāzes gada patēriņu kWh:"))
 
 if paterins <= 2635:
-    print("Gāzes cena par gadu ir EUR", round(paterins * 0.1045819, 4))
+    print("Gāzes cena par gadu ir EUR", round(paterins * 0.1045819, 2))
 elif paterins >= 2635.1 and paterins <= 5269:
-    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0917141, 4))
+    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0917141, 2))
 elif paterins >= 5269.1 and paterins <= 63227.9:
-    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0762993, 4))
+    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0762993, 2))
 elif paterins >= 63228 and paterins <= 263450:
-    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0762993, 4))
+    print("Gāzes cena par gadu ir EUR", round(paterins * 0.0762993, 2))
+
+
+#2.variants
+
+paterins = int(input("Cik daudz gāzes Tu patērēji šomēnes? "))
+
+gadaPaterins = paterins * 12
+
+if gadaPaterins <= 2635:
+    print ("1.kategorijas tarifs")
+    izmaksas = paterins * 0.1045819
+elif gadaPaterins <= 5269:
+    print("2.kategorijas tarifs")
+    izmaksas = paterins * 0.0917141
+else:
+    print("3.kategorijas tarifs")
+    izmaksas = paterins * 0.0762993
+
+print("Tev šomēnes jāmaksā ir: ", izmaksas)
+
 
